@@ -1,4 +1,4 @@
-import styles from "./EmbedGrid.module.css";
+import styles from "./EmbedGrid.module.sass";
 //import FourthwallEmbed from "./FourthwallEmbed";
 import TwitchChatEmbed from "./TwitchChatEmbed";
 import TwitchEmbed from "./TwitchEmbed";
@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <div className={styles.parent}>
-      <div className={styles.div1}>
+      <div className={styles.twitch}>
         <TwitchEmbed
           channel={CHANNEL}
           parent={CHANNEL_PARENT}
@@ -27,7 +27,7 @@ export default function Navbar() {
           height={HEIGHT}
         />
       </div>
-      <div className={styles.div2}>
+      <div className={styles.twitchchat}>
         <TwitchChatEmbed
           channel={CHANNEL}
           parent={CHANNEL_PARENT}
