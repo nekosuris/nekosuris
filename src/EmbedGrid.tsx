@@ -5,7 +5,7 @@ import TwitchEmbed from "./TwitchEmbed";
 
 export default function Navbar() {
   const CHANNEL = "nekosuris";
-  const CHANNEL_PARENT = "localhost";
+  const CHANNEL_PARENT = "nekosuris.netlify.app";
   //const FOURTHWALL = "https://suris-shop.fourthwall.com/";
   const WIDTH = "100%";
   const HEIGHT = "100%";
