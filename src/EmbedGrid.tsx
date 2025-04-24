@@ -3,9 +3,14 @@ import styles from "./EmbedGrid.module.css";
 import TwitchChatEmbed from "./TwitchChatEmbed";
 import TwitchEmbed from "./TwitchEmbed";
 
+// TODO: get channel parent value from config, don't just hardcode it
+
 export default function Navbar() {
   const CHANNEL = "nekosuris";
-  const CHANNEL_PARENT = "nekosuris.netlify.app";
+  const CHANNEL_PARENT =
+    import.meta.env.MODE == "production"
+      ? "nekosuris.netlify.app"
+      : "localhost";
   //const FOURTHWALL = "https://suris-shop.fourthwall.com/";
   const WIDTH = "100%";
   const HEIGHT = "100%";
