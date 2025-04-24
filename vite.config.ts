@@ -4,5 +4,9 @@ import sass from "vite-plugin-sass";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), sass()],
+  plugins: [
+    react(),
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+    sass(),
+  ],
 });
