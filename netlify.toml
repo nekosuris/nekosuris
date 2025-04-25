@@ -10,4 +10,4 @@ NODE_VERSION = "22.14.0"
 # `$DEPLOY_PRIME_URL`.
 
 [context.deploy-preview]
-command = "npm run build --base=$DEPLOY_PRIME_URL"
+command = "npm run build -- --base=$DEPLOY_URL"
