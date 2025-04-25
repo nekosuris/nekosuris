@@ -3,7 +3,7 @@ import TwitchChatEmbed from "./TwitchChatEmbed";
 import TwitchEmbed from "./TwitchEmbed";
 import base_url from "./base_url";
 
-export default function Navbar() {
+export default function TwitchEmbedGrid() {
   const CHANNEL = "nekosuris";
   const CHANNEL_PARENT = base_url();
   const WIDTH = "100%";

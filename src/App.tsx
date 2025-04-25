@@ -2,6 +2,7 @@ import "./App.sass";
 import TwitchEmbedGrid from "./TwitchEmbedGrid";
 import Navbar from "./Navbar";
 import base_url from "./base_url";
+import AboutGrid from "./AboutGrid";
 
 function App() {
   const internalLinks = [
@@ -10,6 +11,12 @@ function App() {
       href: "streaming",
       tooltip: "Watch me on Twitch",
       component: <TwitchEmbedGrid />,
+    },
+    {
+      name: "About",
+      href: "about",
+      tooltip: "About Me",
+      component: <AboutGrid />,
     },
   ];
 
@@ -21,10 +28,7 @@ function App() {
       <header className="container">Header</header>
       <main className="container">
         {internalLinks.map((internalLink) => (
-          <section id={internalLink.href}>
-            <h2>{internalLink.name}</h2>
-            {internalLink.component}
-          </section>
+          <section id={internalLink.href}>{internalLink.component}</section>
         ))}
       </main>
       <footer className="container">Debug: base_url={base_url()}</footer>
