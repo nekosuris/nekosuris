@@ -68,7 +68,7 @@ export default function Navbar(props: NavbarProps) {
             <a
               href={`#${internalLink.href}`}
               data-tooltip={internalLink.tooltip}
-              data-placement="left"
+              data-placement="right"
             >
               {internalLink.name}
             </a>
