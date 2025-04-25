@@ -8,7 +8,17 @@ import { faSun } from "@fortawesome/free-solid-svg-icons/faSun";
 import { faMoon } from "@fortawesome/free-solid-svg-icons/faMoon";
 import React, { useState } from "react";
 
-export default function Navbar() {
+interface InternalLink {
+  name: string;
+  tooltip: string;
+  href: string;
+}
+
+interface NavbarProps {
+  internalLinks: InternalLink[];
+}
+
+export default function Navbar(props: NavbarProps) {
   const [darkMode, setDarkMode] = useState<boolean>(false);
   const toggleDarkModeCallback = React.useCallback(() => {
     setDarkMode(!darkMode);
@@ -53,6 +63,17 @@ export default function Navbar() {
         <li>
           <strong>NekoSuris</strong>
         </li>
+        {props.internalLinks.map((internalLink) => (
+          <li>
+            <a
+              href={`#${internalLink.href}`}
+              data-tooltip={internalLink.tooltip}
+              data-placement="left"
+            >
+              {internalLink.name}
+            </a>
+          </li>
+        ))}
       </ul>
       <ul>
         {externalLinks.map((externalLink) => (
