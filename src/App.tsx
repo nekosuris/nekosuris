@@ -1,6 +1,7 @@
 import "./App.sass";
 import TwitchEmbedGrid from "./TwitchEmbedGrid";
 import Navbar from "./Navbar";
+import base_url from "./base_url";
 
 function App() {
   const internalLinks = [
@@ -26,7 +27,7 @@ function App() {
           </section>
         ))}
       </main>
-      <footer className="container">Footer</footer>
+      <footer className="container">Debug: base_url={base_url()}</footer>
     </>
   );
 }

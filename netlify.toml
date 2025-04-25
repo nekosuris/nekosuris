@@ -1,0 +1,13 @@
+[build]
+publish = "dist"
+command = "npm run build -- --base=$URL"
+
+[build.environment]
+NODE_VERSION = "22.14.0"
+# The magic for deploying previews of branches.
+# We need to override the base url with whatever url Netlify assigns to our
+# preview site.  We do this using the Netlify environment variable
+# `$DEPLOY_PRIME_URL`.
+
+[context.deploy-preview]
+command = "npm run build --base=$DEPLOY_PRIME_URL"
